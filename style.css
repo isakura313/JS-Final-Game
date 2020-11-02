@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url(img/Background.png)
+}
+
+.wrapper{
+  
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%; 
+  overflow-y: hidden;
+  min-width: 200px;
+  max-width: 1600px;
+  
+  
+}
+
+h1{
+position: relative;
+width: 833px;
+height: 67px;
+left: 103px;
+top: 129px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 57px;
+line-height: 67px;
+
+color: #FFFFFF;
+}
+
+#StartDisplay p {
+  position: relative;
+  width: 828px;
+  height: 23px;
+  left: 105px;
+  top: 204px;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 22px;
+
+  color: #FFFFFF;
+}
+
+.hiden {
+  display: none;
+}
+
+
+label::before {
+  content: " ";
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  background: url(img/Rectangle 2.png) no-repeat;
+  opacity: 0;
+}
+
+.levelBox{
+position: relative;
+width: 230px;
+height: 59px;
+left: 152px;
+top: 300px;
+
+}
+
+.level__block{
+ display: flex;
+ padding: 20px;
+ align-items: center;
+}
+
+.level__block input{
+  margin: 10px;
+ 
+}
+
+#gameLevels{
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 59px;
+  color: #FFFFFF;
+ 
+}
+
+
+.menuBtn{
+  max-width: 500px;
+  
+}
+
+#startGameBtn {
+  order: solid 1px #D62B2E;
+  background: #D62B2E;
+  color: #ffffff;
+  border-radius: 7px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 37.5px;
+  min-width: 352px;
+  height: 95px;
+  position: relative;
+width: 352px;
+height: 95px;
+left: 103px;
+top: 624px;
+}
+
+.first__card {
+  position: relative;
+  left: 726.33px;
+  top: 120px;
+}
+
+.second__card{
+  position: relative;
+  left: 800px;
+  top: -150px;
+}
+ 
+
+.easy__lvl .middle__lvl{
+  margin: auto 0;
+  padding:  200px;
+
+}
+
+.cards{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+.card__img{
+width: 218px;
+height: 341px;
+margin: 20px;
+background: url(img/Карта\ 1.png);
+filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+}
+

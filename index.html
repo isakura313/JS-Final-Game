@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <section id="StartDisplay">
+      <h1>Выберите уровень сложности:</h1>
+      <p>Выберите сложность и игра начнется. Чем выше уровень, тем больше будет выборка карт.</p>
+    
+
+      <div class="levelBox">
+
+        <form id ="gameLevels">
+
+        <label class="level__block">
+          <input id="easy" type="radio" name="levels" value="easy" > ПРОСТОЙ
+        </label>
+        <label class="level__block">
+          <input id="middle" type="radio" name="levels" value="middle" > СРЕДНИЙ
+        </label>
+        <label class="level__block"> 
+          <input id="hard" type="radio" name="levels" value="hard" >
+        СЛОЖНЫЙ
+        </label>
+
+      </form> <!-- .gameLevels--> 
+
+      </div> <!-- levelBox-->
+
+      <div class="menuBtn">
+        <button type="button" id="startGameBtn"> Начать Игру</button> <!-- #startGameBtn -->
+      </div> <!-- .menuBtn-->
+
+
+      <div class="menu__card_img">
+
+        <div class="first__card">
+          <img src="img/Карта 1.1.png" >
+        </div>
+        <div class="second__card">
+          <img src="img/Карта 2 (ховер).1.png" >
+        </div>
+
+
+      </div> <!-- .menu__card_img -->
+
+    </section> <!-- .StartDisplay -->
+
+
+    <!-- легкий уровень -->
+
+
+    <div class="easy__lvl hiden">
+      <div class="cards">
+        <div class="card__img"></div>
+        <div class="card__img"></div>
+        <div class="card__img"></div>
+        
+      </div>
+     
+    </div>
+
+    <!-- легкий уровень -->
+
+    <!-- Средний уровень -->
+
+    <div class="middle__lvl hiden">
+      <div class="cards">
+        <div class="card__img"></div>
+        <div class="card__img"></div>
+        <div class="card__img"></div>
+        <div class="card__img"></div>
+        <div class="card__img"></div>
+        <div class="card__img"></div>
+        
+      </div>
+     
+    </div>
+
+    <!-- Средний уровень -->
+
+
+    <!-- Сложный уровень -->
+
+    <div class="hard__lvl hiden">
+      <div class="cards">
+        <div class="card__img"></div>
+        <div class="card__img"></div>
+        <div class="card__img"></div>
+        <div class="card__img"></div>
+        <div class="card__img"></div>
+        <div class="card__img"></div>
+        <div class="card__img"></div>
+        <div class="card__img"></div>
+        <div class="card__img"></div>
+        
+      </div>
+    </div>
+
+     <!-- Сложный уровень -->
+
+  </div> <!-- .wrapper -->
+
+
+  <script src="script.js"></script>
+</body>
+</html>
