@@ -4,43 +4,80 @@ const level = document.getElementById("gameLevels");
 
 let StartDisplay = document.querySelector("#StartDisplay");
 
-let easyLevelCard = document.querySelector(".easy__lvl");
+let easyLevelCard = document.querySelector(".easy__lvl ");
 let middleLevelCard = document.querySelector(".middle__lvl");
 let hardLevelCard = document.querySelector(".hard__lvl");
 
-let allCardImg = document.querySelectorAll(" .cards_1lvl .card__img ");
+
+const levelJS = document.querySelectorAll(".level-js");
+const cards = document.querySelectorAll("  .card__img ");
+
+
+
 let cardFront = document.querySelectorAll(".card__front");
 let cardBack = document.querySelectorAll(".card__back");
 
-console.log(allCardImg);
+function generateRandomNumber(maxNumber) {
+  return Math.floor(Math.random() * maxNumber);
+}
 
 button.addEventListener("click", (e) => {
   if (level[0].checked) {
     StartDisplay.classList.toggle("hiden");
     easyLevelCard.classList.remove("hiden");
-    // startGame();
+  
+    
   } else if (level[1].checked) {
     StartDisplay.classList.toggle("hiden");
     middleLevelCard.classList.remove("hiden");
+
+    
   } else if (level[2].checked) {
     StartDisplay.classList.toggle("hiden");
     hardLevelCard.classList.remove("hiden");
+
   }
+  
 });
 
-let cards = [...allCardImg];
+function getLevel() {
+   
+}
 
-console.log(cards);
+generateCards();
 
-for (let i = 0; i < cards.length; i++) {
-  cards[i].addEventListener("click", (e) => {
-    cardFront[i].classList.add("hiden");
-    cardBack[i].classList.remove("hiden");
+function generateCards() {
+  const randomNumber = generateRandomNumber(cards.length);
+  cards[randomNumber].classList.add("active");
+  
+  cards.forEach(card => {
+    const cardFront = card.querySelector(".card__front");
+    const cardBack = card.querySelector(".card__back");
+  
+    function cardEventPageClose() {
+      console.log("cardEventPageClose");
+      StartDisplay.classList.remove("hiden");
+      generateCards();
+      card.classList.remove("active");
+      cardFront.classList.remove("hidden");
+      easyLevelCard.classList.add("hiden");
+      middleLevelCard.classList.add("hiden");
+      hardLevelCard.classList.add("hiden");
+      card.removeEventListener("click", cardEventPageClose);
+    }
+  
+    function cardEventFunction(e) {
+      cardFront.classList.add("hiden");
+      cardBack.classList.remove("hiden");
+      // cards.forEach((card1, i) => {
+      //   card1.onclick = function () { };
+      // });
+      card.addEventListener("click", cardEventPageClose);
+      
+    }
+    card.onclick = cardEventFunction;
+    
   });
 }
 
-//создать функцию которая на одну из карточек будет вешать класс с багом , на все остальные окончание игры, рандомно
 
-// создать функцию , которая при повторном нажатии на карту возвращает на начальный экран (StartDisplay) и позволяет заново сыграть
-
-//  сделать что-то чтобы была возможность выбрать только одну карту а не все по очереди

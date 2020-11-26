@@ -4,15 +4,15 @@
   box-sizing: border-box;
 }
 
-body{
-  background-image: url(img/Background.png)
+body {
+  background-image: url(img/Background.png);
 }
 
-.wrapper{
-  font-family: 'Roboto', sans-serif;
+.wrapper {
+  font-family: "Roboto", sans-serif;
   margin: 0 auto;
   height: 100%;
-  width: 100%; 
+  width: 100%;
   overflow-y: hidden;
   min-width: 200px;
   max-width: 1600px;
@@ -29,7 +29,7 @@ h1 {
   font-weight: bold;
   font-size: 57px;
   line-height: 67px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 #StartDisplay p {
@@ -43,14 +43,14 @@ h1 {
   font-weight: bold;
   font-size: 19px;
   line-height: 22px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .hiden {
   display: none;
 }
 
-.levelBox{
+.levelBox {
   position: relative;
   width: 230px;
   height: 59px;
@@ -74,17 +74,16 @@ h1 {
   font-weight: bold;
   font-size: 50px;
   line-height: 59px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-
-.menuBtn{
+.menuBtn {
   max-width: 500px;
 }
 
 #startGameBtn {
-  order: solid 1px #D62B2E;
-  background: #D62B2E;
+  order: solid 1px #d62b2e;
+  background: #d62b2e;
   color: #ffffff;
   border-radius: 7px;
   font-size: 32px;
@@ -105,76 +104,92 @@ h1 {
   top: 120px;
 }
 
-.second__card{
+.second__card {
   position: relative;
   left: 800px;
   top: -150px;
 }
- 
 
-.easy__lvl .middle__lvl .hard_lvl{
+.easy__lvl .middle__lvl .hard_lvl {
   margin: auto 0;
-  padding:  200px;
+  padding: 200px;
 }
 
-.cards_1lvl{
+.middle__lvl {
+  
+  
+}
+
+.cards_1lvl {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.cards_2lvl{
+.cards_2lvl {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr ;
+  grid-template-rows: 1fr 1fr;
   margin: 100px;
 }
 
-.cards_3lvl{
+.cards_3lvl {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr  ;
-  margin: 100px ;
+  grid-template-rows: 1fr 1fr;
+  margin: 100px;
 }
 
-
-.card__img{
+.card__img {
   width: 218px;
   height: 341px;
   margin: 20px;
-  background: url(img/Карта\ 1.png);
+  /* background: url(img/Карта\ 1.png); */
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+}
+
+.card__img.active .gameover {
+  display: none;
+}
+
+/* .card__img:not(.active) .gameover {
+  display: block;
+} */
+
+.card__img:not(.active) .bug {
+  display: none;
 }
 
 .card__hover {
   filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
   transform: rotate(-3.08deg);
-};
+}
 
-.card__front{
+.card__front {
   width: 218px;
   height: 341px;
-  margin: 20px;
+  /* margin: 20px; */
   background: url(img/Карта\ 1.png);
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
 }
 
-/* .gameover{
-  width: 218px;
-  height: 341px;
-  background: url(img/gameover.png);
-  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
-} */
-
-.card__back{
+.gameover{
   width: 218px;
   height: 341px;
   background: url(img/gameover.png);
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
 }
 
-.bug{
+.card__back {
+  width: 218px;
+  height: 341px;
+  /* background: url(img/gameover.png); */
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+  position: relative;
+}
+
+.bug {
   width: 218px;
   height: 341px;
   background: url(img/cardBUG.png);
